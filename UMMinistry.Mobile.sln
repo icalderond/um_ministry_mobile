@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMMinistry.Mobile", "UMMinistry.Mobile\UMMinistry.Mobile.csproj", "{A9DA2C42-5048-490E-AA14-66EB345B9A41}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMMinistry.Client", "UMMinistry.Client\UMMinistry.Client.csproj", "{EF6EA967-D119-4D52-987A-7684843DF477}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UMMinistry.Core", "UMMinistry.Core\UMMinistry.Core.csproj", "{567552FB-317A-4F28-AD3F-35A9BF0EADA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{A9DA2C42-5048-490E-AA14-66EB345B9A41}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A9DA2C42-5048-490E-AA14-66EB345B9A41}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A9DA2C42-5048-490E-AA14-66EB345B9A41}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF6EA967-D119-4D52-987A-7684843DF477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF6EA967-D119-4D52-987A-7684843DF477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF6EA967-D119-4D52-987A-7684843DF477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF6EA967-D119-4D52-987A-7684843DF477}.Release|Any CPU.Build.0 = Release|Any CPU
+		{567552FB-317A-4F28-AD3F-35A9BF0EADA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{567552FB-317A-4F28-AD3F-35A9BF0EADA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{567552FB-317A-4F28-AD3F-35A9BF0EADA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{567552FB-317A-4F28-AD3F-35A9BF0EADA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
