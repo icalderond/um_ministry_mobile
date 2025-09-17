@@ -16,6 +16,11 @@ public partial class LoginViewModel : BaseViewModel, ILoginViewModel
     #endregion
 
     #region Lifecycle Methods
+    /// <summary>
+    /// Constructor
+    /// </summary>
+    /// <param name="authService"></param>
+    /// <param name="navigationService"></param>
     public LoginViewModel(IAuthService authService, INavigationService navigationService)
     {
         _authService = authService;
@@ -24,11 +29,17 @@ public partial class LoginViewModel : BaseViewModel, ILoginViewModel
     #endregion
     
     #region Public Methods
+    /// <summary>
+    /// Login Async command
+    /// </summary>
     [RelayCommand]
-    public async Task LoginAsync()
+    private async Task LoginAsync()
     {
         var response = await _authService.LoginAsync(UserName, Password);
-        var token = response;
+        if (!string.IsNullOrWhiteSpace(response))
+        {
+            // await _navigationService.ShellGoToAsync(nameof(MeetingDaysViewModel));
+        }
     }   
     #endregion
 }
