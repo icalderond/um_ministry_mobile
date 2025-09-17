@@ -1,8 +1,9 @@
 using CommunityToolkit.Mvvm.ComponentModel;
+using UMMinistry.Core.ViewModels;
 
 namespace UMMinistry.Mobile.ViewModels.Base;
 
-public partial class BaseViewModel : ObservableObject
+public partial class BaseViewModel : ObservableObject, IViewModel
 {
     #region Private properties
     [ObservableProperty] private bool _isBusy;
