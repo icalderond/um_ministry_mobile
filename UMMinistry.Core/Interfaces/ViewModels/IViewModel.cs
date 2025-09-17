@@ -1,4 +1,4 @@
-namespace UMMinistry.Core.ViewModels;
+namespace UMMinistry.Core.Interfaces.ViewModels;
 
 public interface IViewModel
 {

@@ -1,4 +1,4 @@
-using UMMinistry.Core.ViewModels;
+using UMMinistry.Core.Interfaces.ViewModels;
 
 namespace UMMinistry.Mobile.UIControls;
 

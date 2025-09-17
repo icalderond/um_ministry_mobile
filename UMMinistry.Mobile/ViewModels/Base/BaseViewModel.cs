@@ -1,5 +1,5 @@
 using CommunityToolkit.Mvvm.ComponentModel;
-using UMMinistry.Core.ViewModels;
+using UMMinistry.Core.Interfaces.ViewModels;
 
 namespace UMMinistry.Mobile.ViewModels.Base;
 
