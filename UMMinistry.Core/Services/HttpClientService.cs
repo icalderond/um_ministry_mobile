@@ -149,13 +149,25 @@ public class HttpClientService : IHttpClientService
     /// <returns></returns>
     private ApiSuccessResponse<TResponse> ProcessResponse<TResponse>(HttpResponseMessage res)
     {
+        var responseSucces = new ApiSuccessResponse<TResponse>();
+        responseSucces.HttpCode = (int)res.StatusCode;
+
         var s = res.Content.ReadAsStringAsync().Result;
         if (res.IsSuccessStatusCode)
         {
-            var responseSucces = string.IsNullOrEmpty(s)
-                ? default
-                : JsonSerializer.Deserialize<ApiSuccessResponse<TResponse>>(s,
+            if (string.IsNullOrEmpty(s))
+            {
+                responseSucces = default;
+            }
+            else if (typeof(TResponse) == typeof(string))
+            {
+                responseSucces.Data = (TResponse)(object)s;
+            }
+            else
+            {
+                responseSucces = JsonSerializer.Deserialize<ApiSuccessResponse<TResponse>>(s,
                     new JsonSerializerOptions() { PropertyNameCaseInsensitive = true });
+            }
 
             return responseSucces;
         }
