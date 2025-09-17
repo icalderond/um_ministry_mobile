@@ -3,8 +3,33 @@
 <uiControls:BaseContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:uiControls="clr-namespace:UMMinistry.Mobile.UIControls"
-             x:Class="UMMinistry.Mobile.Pages.LoginPage">
+             xmlns:vm="clr-namespace:UMMinistry.Mobile.ViewModels"
+             x:Class="UMMinistry.Mobile.Pages.LoginPage"
+             x:DataType="vm:LoginViewModel">
     <ContentPage.Content>
-        
+        <Grid Padding="24" RowDefinitions="Auto,*,Auto" ColumnDefinitions="*">
+            <VerticalStackLayout Spacing="16">
+                <Label Text="Bienvenido" FontSize="32" FontAttributes="Bold" HorizontalOptions="Center" />
+                <Label Text="Inicia sesión para continuar" FontSize="14" HorizontalOptions="Center" />
+            </VerticalStackLayout>
+
+            <VerticalStackLayout Grid.Row="1" Spacing="12">
+                <Entry
+                    Placeholder="Usuario"
+                    Text="{Binding UserName, Mode=TwoWay}"
+                    ClearButtonVisibility="WhileEditing"
+                    Keyboard="Email" />
+
+                <Entry
+                    Placeholder="Contraseña"
+                    Text="{Binding Password, Mode=TwoWay}"
+                    IsPassword="True"
+                    ClearButtonVisibility="WhileEditing" />
+
+                <Button
+                    Text="Ingresar"
+                    Command="{Binding LoginCommand}" />
+            </VerticalStackLayout>
+        </Grid>
     </ContentPage.Content>
 </uiControls:BaseContentPage>

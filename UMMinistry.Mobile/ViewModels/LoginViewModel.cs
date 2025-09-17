@@ -38,7 +38,7 @@ public partial class LoginViewModel : BaseViewModel, ILoginViewModel
         var response = await _authService.LoginAsync(UserName, Password);
         if (!string.IsNullOrWhiteSpace(response))
         {
-            // await _navigationService.ShellGoToAsync(nameof(MeetingDaysViewModel));
+            await _navigationService.ShellGoToAsync(nameof(MeetingDaysViewModel));
         }
     }   
     #endregion

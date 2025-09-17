@@ -20,6 +20,7 @@ public static class MauiAppExtensions
     {
         mauiAppBuilder.Services.AddSingleton<AppShell>();
         mauiAppBuilder.Services.AddSingleton<LoginPage>();
+        mauiAppBuilder.Services.AddSingleton<MeetingDaysPage>();
 
         return mauiAppBuilder;
     }
@@ -33,6 +34,7 @@ public static class MauiAppExtensions
     {
          mauiAppBuilder.Services.AddTransient<IAppShellViewModel, AppShellViewModel>();
          mauiAppBuilder.Services.AddTransient<ILoginViewModel, LoginViewModel>();
+         mauiAppBuilder.Services.AddTransient<IMeetingDaysViewModel, MeetingDaysViewModel>();
         
         return mauiAppBuilder;
     }
@@ -48,6 +50,7 @@ public static class MauiAppExtensions
         mauiAppBuilder.Services.AddSingleton<INavigationService, NavigationService>();
         mauiAppBuilder.Services.AddSingleton<HttpClient>();
         mauiAppBuilder.Services.AddSingleton<IAuthService, AuthService>();
+        
         return mauiAppBuilder;
     }
 
@@ -59,6 +62,7 @@ public static class MauiAppExtensions
     {
         Routing.RegisterRoute(nameof(AppShellViewModel), typeof(AppShell));
         Routing.RegisterRoute(nameof(LoginViewModel), typeof(LoginPage));
+        Routing.RegisterRoute(nameof(MeetingDaysViewModel), typeof(MeetingDaysPage));
 
         return mauiAppBuilder;
     }
