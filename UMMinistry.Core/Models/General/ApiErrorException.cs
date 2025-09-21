@@ -11,7 +11,7 @@ public class ApiErrorException : Exception
     /// </summary>
     /// <param name="apiErrorResponse"></param>
     /// <param name="message"></param>
-    public ApiErrorException(ApiErrorResponse apiErrorResponse) : base(apiErrorResponse.ErrorMessage)
+    public ApiErrorException(ApiErrorResponse? apiErrorResponse) : base(apiErrorResponse?.ErrorMessage)
     {
         ApiErrorResponse = apiErrorResponse;
     }

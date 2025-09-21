@@ -1,7 +1,7 @@
 using UMMinistry.Client;
+using UMMinistry.Client.Services;
 using UMMinistry.Core.Interfaces.Services;
 using UMMinistry.Core.Interfaces.ViewModels;
-using UMMinistry.Core.Services;
 using UMMinistry.Core.ViewModels;
 using UMMinistry.Mobile.Pages;
 using UMMinistry.Mobile.Utilities.Services;
@@ -46,6 +46,7 @@ public static class MauiAppExtensions
     /// <returns></returns>
     public static MauiAppBuilder RegisterServices(this MauiAppBuilder mauiAppBuilder)
     {
+        mauiAppBuilder.Services.AddSingleton<IHttpService, HttpService>();
         mauiAppBuilder.Services.AddSingleton<IHttpClientService, HttpClientService>();
         mauiAppBuilder.Services.AddSingleton<INavigationService, NavigationService>();
         mauiAppBuilder.Services.AddSingleton<HttpClient>();
